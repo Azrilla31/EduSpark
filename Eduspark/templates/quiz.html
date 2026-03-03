@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>Quick Quiz</h1>
+
+    <form method="POST">
+
+        <p>1. Python is a?</p>
+        <input type="radio" name="q1" value="a"> Programming Language<br>
+        <input type="radio" name="q1" value="b"> Car<br>
+
+        <p>2. HTML stands for?</p>
+        <input type="radio" name="q2" value="a"> Hyper Trainer Marking Language<br>
+        <input type="radio" name="q2" value="b"> Hyper Text Markup Language<br>
+
+        <p>3. CSS is used for?</p>
+        <input type="radio" name="q3" value="a"> Database<br>
+        <input type="radio" name="q3" value="c"> Styling<br>
+
+        <p>4. C is a?</p>
+        <input type="radio" name="q4" value="a"> Programming Language<br>
+        <input type="radio" name="q4" value="b"> Browser<br>
+
+        <p>5. Flask is written in?</p>
+        <input type="radio" name="q5" value="a"> Java<br>
+        <input type="radio" name="q5" value="b"> Python<br><br>
+
+        <button type="submit">Submit Quiz</button>
+    </form>
+</div>
+{% endblock %}

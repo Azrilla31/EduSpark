@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EduSpark</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="navbar">
+    <a href="{{ url_for('home') }}" class="nav-btn">🏠 Home</a>
+    <a href="{{ url_for('courses') }}" class="nav-btn">📚 Courses</a>
+    <a href="{{ url_for('quiz') }}" class="nav-btn">📝 Quiz</a>
+    <a href="{{ url_for('contact') }}" class="nav-btn">📩 Contact</a>
+</div>
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <div class="flash-container">
+      {% for message in messages %}
+        <p class="flash-msg">{{ message }}</p>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endwith %}
+
+{% block content %}{% endblock %}
+
+</body>
+</html>
